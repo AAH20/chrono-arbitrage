@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  chrono-arbitrage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chrono-arbitrage-core
+    environment:
+      - PYTHONUNBUFFERED=1
+      - CHRONO_ENV=production
+    volumes:
+      - chrono-treasury-data:/app/data
+    restart: unless-stopped
+    command: ["scan"]
+
+volumes:
+  chrono-treasury-data:
+    driver: local

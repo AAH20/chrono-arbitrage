@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chrono-arbitrage"
+version = "0.1.0"
+description = "Autonomous Real-Time Narrative Intelligence & Liquidity Arbitrage Swarm for Prediction Markets and the Attention Economy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Ahmed Hassan", email = "developer@a2zsoc.com"}
+]
+keywords = [
+    "attention-economy",
+    "prediction-markets",
+    "polymarket",
+    "kalshi",
+    "arbitrage",
+    "algorithmic-trading",
+    "narrative-intelligence",
+    "ai-agents",
+    "kelly-criterion",
+    "evidence-scoring",
+    "grc",
+    "quant",
+    "swarm-intelligence"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[project.scripts]
+chrono-arbitrage = "chrono_arbitrage.cli:main"
